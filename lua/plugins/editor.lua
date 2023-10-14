@@ -15,9 +15,5 @@ return {
         style = "moon"
       },
     },
-    -- Code Completion
-    {
-
-    }
   }
   

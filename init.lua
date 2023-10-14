@@ -21,7 +21,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
-require('lazy').setup('plugins')
+require('lazy').setup({{import = 'plugins'}, {import = 'plugins.lsp'} })
 
 -- Other Imports
 require('vars')      -- Variables
