@@ -4,68 +4,67 @@ return {
     config = function()
       local lualine = require("lualine")
       local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-  
+
       local colors = {
-        blue = "#65D1FF",
-        green = "#3EFFDC",
-        violet = "#FF61EF",
-        yellow = "#FFDA7B",
-        red = "#FF4A4A",
-        fg = "#c3ccdc",
-        bg = "#112638",
-        inactive_bg = "#2c3043",
+        blue   = '#80a0ff',
+        cyan   = '#79dac8',
+        black  = '#080808',
+        white  = '#c6c6c6',
+        red    = '#ff5189',
+        violet = '#d183e8',
+        grey   = '#303030',
+        orange = '#ff9e64',
+        moon_bg = '#222436' -- match with tokyonight moon theme
       }
-  
-      local my_lualine_theme = {
+      
+      local bubbles_theme = { -- reconfigured bubble theme
         normal = {
-          a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
-          b = { bg = colors.bg, fg = colors.fg },
-          c = { bg = colors.bg, fg = colors.fg },
+          a = { fg = colors.black, bg = colors.violet },
+          b = { fg = colors.white, bg = colors.grey },
+          c = { fg = colors.black, bg = colors.moon_bg },
         },
-        insert = {
-          a = { bg = colors.green, fg = colors.bg, gui = "bold" },
-          b = { bg = colors.bg, fg = colors.fg },
-          c = { bg = colors.bg, fg = colors.fg },
-        },
-        visual = {
-          a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
-          b = { bg = colors.bg, fg = colors.fg },
-          c = { bg = colors.bg, fg = colors.fg },
-        },
-        command = {
-          a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
-          b = { bg = colors.bg, fg = colors.fg },
-          c = { bg = colors.bg, fg = colors.fg },
-        },
-        replace = {
-          a = { bg = colors.red, fg = colors.bg, gui = "bold" },
-          b = { bg = colors.bg, fg = colors.fg },
-          c = { bg = colors.bg, fg = colors.fg },
-        },
+      
+        insert = { a = { fg = colors.black, bg = colors.blue } },
+        visual = { a = { fg = colors.black, bg = colors.cyan } },
+        replace = { a = { fg = colors.black, bg = colors.red } },
+        command = { a = { fg = colors.black, bg = colors.orange } },
+      
         inactive = {
-          a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-          b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-          c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+          a = { fg = colors.white, bg = colors.moon_bg },
+          b = { fg = colors.white, bg = colors.moon_bg },
+          c = { fg = colors.black, bg = colors.moon_bg },
         },
       }
-  
-      -- configure lualine with modified theme
+
       lualine.setup({
         options = {
-          theme = my_lualine_theme,
+          theme = bubbles_theme,
+          component_separators = '|',
+          section_separators = { left = '', right = '' },
         },
         sections = {
-          lualine_x = {
-            {
-              lazy_status.updates,
-              cond = lazy_status.has_updates,
-              color = { fg = "#ff9e64" },
-            },
-            { "encoding" },
-            { "fileformat" },
-            { "filetype" },
+          lualine_a = {
+            { 'mode', separator = { left = '' }, right_padding = 3 },
+          },
+          lualine_b = { 'branch', 'diff' },
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = { 'filename', 'filetype' },
+          lualine_z = {
+            { 'location', separator = { right = '' }, left_padding = 3 },
           },
         },
+        inactive_sections = {
+          lualine_a = {},
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = {},
+        },
+        tabline = {},
+        extensions = {},
       })
-    end,
+
+    end
   }
