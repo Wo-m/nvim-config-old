@@ -13,6 +13,7 @@ return{
       keymap.set('n', '<Leader><', '<Cmd>BufferPrevious<CR>', opts)
       keymap.set('n', '<Leader>>', '<Cmd>BufferNext<CR>', opts)
       keymap.set('n', '<Leader>t', '<Cmd>BufferPick<CR>', opts)
+      keymap.set('n', '<Leader>c', '<Cmd>BufferClose<CR>', opts)
     end,
     opts = {
     },
