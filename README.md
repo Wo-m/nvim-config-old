@@ -42,6 +42,6 @@ _see [commands](#commands) to go along with these bindings_
 - `<leader>nl` - list notes in CWD
 
 ## Commands
-- `:Push` - triggers `git push origin HEAD` in ToggleTerm window
-- `:Co {branch}` - trgiger `git checkout {branch}`
-- `:Cob {branch}` - trgiger `git checkout -b {branch}`
+- `:Push` - executes `git push origin HEAD` in ToggleTerm window
+- `:Co {branch}` - executes `git checkout {branch}`
+- `:Cob {branch}` - executes `git checkout -b {branch}`
