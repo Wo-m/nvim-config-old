@@ -1,5 +1,4 @@
 local settings = {
-    -- every line should be same width without escaped \
     header = {
         type = "text",
         oldfiles_directory = false,
@@ -46,26 +45,6 @@ local settings = {
         default_color = "",
         oldfiles_amount = 0,
     },
-
-    -- body = {
-    --     type = "mapping",
-    --     oldfiles_directory = false,
-    --     align = "center",
-    --     fold_section = false,
-    --     title = "Basic Commands",
-    --     margin = 5,
-    --     content = {
-    --         { " Find File", "Telescope find_files", "<leader>ff" },
-    --         { " Find Word", "Telescope live_grep", "<leader>lg" },
-    --         { " Recent Files", "Telescope oldfiles", "<leader>of" },
-    --         { "  File Explorer", "NvimTreeToggle", "<leader>ee" },
-    --         { " Colorschemes", "Telescope colorscheme", "<leader>cs" },
-    --     },
-    --     highlight = "String",
-    --     default_color = "",
-    --     oldfiles_amount = 0,
-    -- },
-
     options = {
         cursor_column = 0.5,
         empty_lines_between_mappings = true,

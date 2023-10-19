@@ -3,8 +3,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       local lualine = require("lualine")
-      local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-
+      local lazy_status = require("lazy.status")
       local colors = {
         blue   = '#80a0ff',
         cyan   = '#79dac8',
@@ -17,7 +16,7 @@ return {
         moon_bg = '#222436' -- match with tokyonight moon theme
       }
       
-      local bubbles_theme = { -- reconfigured bubble theme
+      local wom_bubbles_theme = { -- reconfigured bubble theme
         normal = {
           a = { fg = colors.black, bg = colors.violet },
           b = { fg = colors.white, bg = colors.grey },
@@ -38,7 +37,7 @@ return {
 
       lualine.setup({
         options = {
-          theme = bubbles_theme,
+          theme = wom_bubbles_theme,
           component_separators = '|',
           section_separators = { left = '', right = '' },
         },

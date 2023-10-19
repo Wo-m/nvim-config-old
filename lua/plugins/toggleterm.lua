@@ -7,12 +7,16 @@ return {
 
         local keymap = vim.keymap
         local map = vim.api.nvim_set_keymap
-        keymap.set('n', '<Leader>p', '<Cmd>ToggleTerm size=40 direction=float<CR>', opts)
-        map("t", "<esc>", "<C-\\><C-n> <Cmd>q<Cr>", {})
+
+        -- Always open terminal in float mode (personal preference)
+        keymap.set('n', '<Leader>p', '<Cmd>ToggleTerm size=40 direction=float<CR>', opts) -- open
+        map("t", "<esc>", "<C-\\><C-n> <Cmd>q<Cr>", {}) -- close
 
         -- Git commands
-        vim.api.nvim_create_user_command('Push', 'lua require("toggleterm").exec("git push -u origin HEAD")',{})
-        vim.api.nvim_create_user_command('Con', 
+        vim.api.nvim_create_user_command('Push',
+                                'lua require("toggleterm").exec("git push -u origin HEAD")',
+                                {})
+        vim.api.nvim_create_user_command('Cob', 
                                 function(opts)
                                     require("toggleterm").exec("git checkout -b ".. opts.fargs[1])
                                 end,

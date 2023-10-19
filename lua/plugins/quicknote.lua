@@ -7,7 +7,7 @@ return {
 
         local keymap = vim.keymap
 
-        -- Always use notes at CWD
+        -- Always use notes at CWD Level
         keymap.set('n', '<Leader>nn', '<Cmd>lua require("quicknote").NewNoteAtCWD()<CR>', opts)
         keymap.set('n', '<Leader>no', '<Cmd>lua require("quicknote").OpenNoteAtCWD()<CR>', opts)
         keymap.set('n', '<Leader>nl', '<Cmd>lua require("quicknote").ListNotesForCWD()<CR>', opts)
