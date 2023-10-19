@@ -1,40 +1,47 @@
 # Wom NeoVim config
-My personal NeoVim configuration. Copy if you would like but recommend building from scratch. Parts of config (mason, lspconfig, nvim-cmp, nvim-tree, telescope) inspired by config done by [Josean Martinez](https://www.youtube.com/@joseanmartinez)
+My personal NeoVim configuration. Parts of config (mason, lspconfig, nvim-cmp, nvim-tree, telescope) inspired by config done by [Josean Martinez](https://www.youtube.com/@joseanmartinez)
 
-To use clone this repo into `$XDG_CONFIG_HOME/nvim/`. For example on mac with default paths `git clone https://github.com/Wo-m/nvim-config.git ~/.config/nvim/`
+## Usage
+To use config clone this repo into `$XDG_CONFIG_HOME/nvim/`.
 
-## Vim commands
-Just some vim commands I find useful.
-### Normal Mode
-#### Word Nav (capital for whitespace and punctuation)
-w - word  
-e - end of word  
-b - backward word  
-ge - backward end of word  
+For example on mac with default paths `git clone https://github.com/Wo-m/nvim-config.git ~/.config/nvim/`
 
-#### Line Nav (capital for backward)
-f<> - go to next <>  
-t<> - go to before next <>  
-; - repeat forward  
-, - repeat backwards  
-$ - end of line  
-0 - start of line  
-^ - start of line (first char)  
-g_ - end of line (last char)  
+## Main Packages and Keymaps
+`<leader>` set to ,
 
-#### Search
-/<> - find next <>  
-?<> - find previous <>  
-n - repeat forward  
-N - repeat back  
+**nvim-tree** (file explorer)
+- `<leader>ee` - open explorer
+- `<leader>ef` - open explorer at current file
+- `<leader>ec` - close explorer
 
-#### General
-H - cursor top (high)  
-M - cursor middle  
-L - cursor bottom (low)  
+**telescope** (fuzzy finder)  
+- `<leader>ff` - find files
+- `<leader>fs` - find string (live_grep)
+- `<leader>fc` - find string at current cursor
+  
+**barbar** (tabs)  
+_all files opened with telescope and nvim_tree go to a new tab_
+- `<leader>t` - tab picker
+- `<leader>c` - close current tab
+- `<leader>,` - prev tab
+- `<leader>.` - next tab
 
-### Visual Mode
-iw - select word cursor is in  
-i<> - select all in open/close <> (cursor must inside), will match closing/opening expression  
-    - if cursor is in string, to select all in the string: i"  
-    - if cursor is in method, to select all in method: i{ or i}  
+**togglterm** (terminal)  
+_defaults to float terminal, can change in config according to preference_
+- `<leader>p` - open/close terminal window in normal mode
+- `<esc>` - close terminal in terminal mode
+
+**vgit** (git gui)  
+_see [commands](#commands) to go along with these bindings_
+- `<leader>gp` - open git preview window to view changes, stage/unstage, and commit
+
+**quicknote** (md notes)  
+- `<leader>nn` - create new note in CWD
+- `<leader>no` - open note in CWD
+- `<leader>nd` - delete note in CWD
+- `<leader>nl` - list notes in CWD
+
+## Commands
+- `:Push` - triggers `git push origin HEAD` in ToggleTerm window
+- `:Co` {branch} - trgiger `git checkout {branch}`
+- `:Cob` {branch} - trgiger `git checkout -b {branch}`
