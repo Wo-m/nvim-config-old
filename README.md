@@ -1,5 +1,5 @@
 # Wom NeoVim config
-My personal NeoVim configuration. Copy if you would like but recommend building from scratch. Inspired by config done by [Josean Martinez](https://www.youtube.com/@joseanmartinez)
+My personal NeoVim configuration. Copy if you would like but recommend building from scratch. Parts of config (mason, lspconfig, nvim-cmp, nvim-tree, telescope) inspired by config done by [Josean Martinez](https://www.youtube.com/@joseanmartinez)
 
 ## Vim commands
 Just some vim commands I find useful.
