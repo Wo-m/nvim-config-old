@@ -43,5 +43,5 @@ _see [commands](#commands) to go along with these bindings_
 
 ## Commands
 - `:Push` - executes `git push origin HEAD` in ToggleTerm window
-- `:Co {branch}` - executes `git checkout {branch}`
-- `:Cob {branch}` - executes `git checkout -b {branch}`
+- `:Co {branch}` - executes `git checkout {branch}` in ToggleTerm window
+- `:Cob {branch}` - executes `git checkout -b {branch}` in ToggleTerm window
