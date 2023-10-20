@@ -35,6 +35,9 @@ _defaults to float terminal, can change in config according to preference_
 _see [commands](#commands) to go along with these bindings_
 - `<leader>gp` - open git preview window to view changes, stage/unstage, and commit
 
+**oil** (file explorer/editor in buffer) \[this one is so GOOD\]  
+- `-` - open oil explorer buffer
+
 **quicknote** (md notes)  
 - `<leader>nn` - create new note in CWD
 - `<leader>no` - open note in CWD
