@@ -1,5 +1,3 @@
---[[ init.lua ]]
-
 -- LEADER
 -- These keybindings need to be defined before the first /
 -- is called; otherwise, it will default to "\"
@@ -24,6 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({{import = 'plugins'}, {import = 'plugins.lsp'} })
 
 -- Other Imports
-require('vars')      -- Variables
-require('opts')      -- Options
-require('keys')      -- Keymaps
+require('variables')
+require('options')
+require('keys')
+require('commands')

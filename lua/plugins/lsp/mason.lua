@@ -32,7 +32,7 @@ return {
             "cssls",
             "lua_ls",
             "pyright",
-            "jdtls",
+            "jdtls", -- java
             "clangd"
           },
           -- auto-install configured servers (with lspconfig)
