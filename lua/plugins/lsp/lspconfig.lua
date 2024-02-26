@@ -42,6 +42,13 @@ return {
 
             opts.desc = "Restart LSP"
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+            opts.desc = "Format Buffer"
+            keymap.set("n", "<leader>fb", vim.lsp.buf.format, opts)
+    
+            opts.desc = "Format Buffer"
+            keymap.set("v", "<leader>fb", vim.lsp.buf.format, opts)
+
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -65,18 +72,9 @@ return {
         lspconfig["clangd"].setup {
             capabilities = capabilities,
             cmd = {
-              "clangd",
-              "--background-index",
-              "--clang-tidy",
-              "--header-insertion=iwyu",
-              "--completion-style=detailed",
-              "--function-arg-placeholders"
-            },
-            init_options = {
-              usePlaceholders = true,
-              completeUnimported = true,
-              clangdFileStatus = true,
-              semanticHighlighting = true
+                "clangd",
+                "--clang-tidy",
+                "--completion-style=detailed",
             },
             on_attach = on_attach,
             flags = { debounce_text_changes = 150 }
