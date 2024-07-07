@@ -75,6 +75,7 @@ return {
                 "clangd",
                 "--clang-tidy",
                 "--completion-style=detailed",
+                "--offset-encoding=utf-16",
             },
             on_attach = on_attach,
             flags = { debounce_text_changes = 150 }
