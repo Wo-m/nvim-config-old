@@ -45,9 +45,12 @@ return {
 
             opts.desc = "Format Buffer"
             keymap.set("n", "<leader>fb", vim.lsp.buf.format, opts)
-    
+
             opts.desc = "Format Buffer"
             keymap.set("v", "<leader>fb", vim.lsp.buf.format, opts)
+
+            opts.desc = "Swap Header/Source"
+            keymap.set("n", "<leader>s", "<CMD>ClangdSwitchSourceHeader<CR>", opts)
 
         end
 
