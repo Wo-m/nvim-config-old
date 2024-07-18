@@ -7,44 +7,34 @@ To use config clone this repo into `$XDG_CONFIG_HOME/nvim/`.
 For example on mac with default paths `git clone https://github.com/Wo-m/nvim-config.git ~/.config/nvim/`
 
 ## Main Packages and Keymaps
-`<leader>` set to ,
+`<leader>` set to space
 
 **nvim-tree** (file explorer)
 - `<leader>ee` - open explorer
 - `<leader>ef` - open explorer at current file
 - `<leader>ec` - close explorer
 
-**telescope** (fuzzy finder)  
+**telescope** (fuzzy finder)
 - `<leader>ff` - find files
+- `<leader>fg` - find changed files
 - `<leader>fs` - find string (live_grep)
 - `<leader>fc` - find string at current cursor
-  
-**barbar** (tabs)  
-_all files opened with telescope and nvim_tree go to a new tab_
-- `<leader>t` - tab picker
+
+**tabby** (tabs)
 - `<leader>c` - close current tab
+- `<leader>n` - new tab (curr file)
 - `<leader>,` - prev tab
 - `<leader>.` - next tab
 
-**togglterm** (terminal)  
+**togglterm** (terminal)
 _defaults to float terminal, can change in config according to preference_
 - `<leader>p` - open/close terminal window in normal mode
-- `<esc>` - close terminal in terminal mode
+- `<leader>;` - open/close lazygit
 
-**vgit** (git gui)  
-_see [commands](#commands) to go along with these bindings_
-- `<leader>gp` - open git preview window to view changes, stage/unstage, and commit
-
-**oil** (file explorer/editor in buffer) \[this one is so GOOD\]  
+**oil** (file explorer/editor in buffer)
 - `-` - open oil explorer buffer
 
-**quicknote** (md notes)  
-- `<leader>nn` - create new note in CWD
-- `<leader>no` - open note in CWD
-- `<leader>nd` - delete note in CWD
-- `<leader>nl` - list notes in CWD
+**other**
+- `<leader>s` - swaps between src and header file using clangd
 
-## Commands
-- `:Push` - executes `git push origin HEAD` in ToggleTerm window
-- `:Co {branch}` - executes `git checkout {branch}` in ToggleTerm window
-- `:Cob {branch}` - executes `git checkout -b {branch}` in ToggleTerm window
+
